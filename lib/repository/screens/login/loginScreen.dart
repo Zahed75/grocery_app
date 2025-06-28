@@ -8,82 +8,104 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Login")),
-      body: Column(
-        children: [
-          Uihelper.CustomImage(img: "onboarding.png"),
-          SizedBox(height: 30),
-          Uihelper.CustomImage(img: "logo.png"),
-          SizedBox(height: 20),
-          Uihelper.CustomText(
-            text: "BD Last Minutes App",
-            color: Color(0XFF000000),
-            fontweight: FontWeight.bold,
-            fontsize: 20,
-            fontfamily: "bold",
-          ),
-          SizedBox(height: 20),
-          Card(
-            elevation: 4,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Container(
-              height: 200,
-              width: 350,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Color(0XFFFFFFFF),
-              ),
-              child: Column(
-                children: [
-                  SizedBox(height: 20),
-                  Uihelper.CustomText(
-                    text: "Zahed",
-                    color: Color(0XFF000000),
-                    fontweight: FontWeight.w500,
-                    fontsize: 14,
-                    fontfamily: "regular",
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              children: [
+                Uihelper.CustomImage(img: "onboarding.png"),
+                SizedBox(height: 30),
+                Uihelper.CustomImage(img: "logo.png"),
+                SizedBox(height: 20),
+                Uihelper.CustomText(
+                  text: "BD Last Minutes App",
+                  color: Color(0XFF000000),
+                  fontweight: FontWeight.bold,
+                  fontsize: 20,
+                  fontfamily: "bold",
+                ),
+                SizedBox(height: 20),
+                Card(
+                  elevation: 4,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
                   ),
-                  SizedBox(height: 5),
-                  Uihelper.CustomText(
-                    text: "X232424",
-                    color: Color(0XFF9C9C9C),
-                    fontweight: FontWeight.bold,
-                    fontsize: 14,
-                    fontfamily: "bold",
-                  ),
-                  SizedBox(
-                    height: 48,
-                    width: 295,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0XFFE23744),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
+                  child: Container(
+                    height: 200,
+                    width: 350,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Color(0XFFFFFFFF),
+                    ),
+                    child: Column(
+                      children: [
+                        SizedBox(height: 20),
+                        Uihelper.CustomText(
+                          text: "Zahed",
+                          color: Color(0XFF000000),
+                          fontweight: FontWeight.w500,
+                          fontsize: 14,
+                          fontfamily: "regular",
                         ),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Uihelper.CustomText(
-                            text: "Login With",
-                            color: Color(0XFFFFFFFF),
-                            fontweight: FontWeight.bold,
-                            fontsize: 14,
-                            fontfamily: "bold",
+                        SizedBox(height: 5),
+                        Uihelper.CustomText(
+                          text: "X232424",
+                          color: Color(0XFF9C9C9C),
+                          fontweight: FontWeight.bold,
+                          fontsize: 14,
+                          fontfamily: "bold",
+                        ),
+                        SizedBox(
+                          height: 48,
+                          width: 295,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color(0XFFE23744),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Uihelper.CustomText(
+                                  text: "Login With",
+                                  color: Color(0XFFFFFFFF),
+                                  fontweight: FontWeight.bold,
+                                  fontsize: 14,
+                                  fontfamily: "bold",
+                                ),
+                                SizedBox(width: 5),
+                                Uihelper.CustomImage(img: "zomato.png"),
+                              ],
+                            ),
                           ),
-                          SizedBox(width: 5),
-                          Uihelper.CustomImage(img: "zomato.png"),
-                        ],
-                      ),
+                        ),
+                        SizedBox(height: 8),
+                        Uihelper.CustomText(
+                          text:
+                              'Access your saved addresses from Zomato automatically!',
+                          color: Color(0XFF9C9C9C),
+                          fontweight: FontWeight.normal,
+                          fontsize: 10,
+                        ),
+                        SizedBox(height: 25),
+                        Uihelper.CustomText(
+                          text: 'or login with phone number',
+                          color: Color(0XFF269237),
+                          fontweight: FontWeight.bold,
+                          fontsize: 14,
+                        ),
+                      ],
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
-        ],
+        ),
       ),
     );
   }
